@@ -18,7 +18,7 @@ def run_monthly(mytimer: func.TimerRequest) -> None:
     
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
     print("Hello, World!")
-
+"""
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
@@ -31,3 +31,4 @@ def run_monthly(mytimer: func.TimerRequest) -> None:
         logging.error(f"Error en el scraping: {str(e)}")
 
     # Aquí va tu código de descarga y procesamiento
+"""
