@@ -1,0 +1,16 @@
+# Ignorar el entorno virtual
+venv/
+env/
+
+# Ignorar archivos y carpetas comunes que no son necesarios en la imagen
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.git/
+.github/
+.vscode/
+.DS_Store
+*.log
