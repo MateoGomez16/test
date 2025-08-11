@@ -1,7 +1,7 @@
 import datetime
 import logging
 import azure.functions as func
-#from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright
 
 app = func.FunctionApp()
 
