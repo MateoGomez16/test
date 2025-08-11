@@ -1,0 +1,21 @@
+import datetime
+import logging
+import azure.functions as func
+
+app = func.FunctionApp()
+
+@app.function_name(name="mytimer")
+@app.timer_trigger(schedule="*/1 * * * * *",  # Cada minuto
+                   arg_name="mytimer",
+                   run_on_startup=False)
+def run_monthly(mytimer: func.TimerRequest) -> None:
+    utc_timestamp = datetime.datetime.utcnow().replace(
+        tzinfo=datetime.timezone.utc).isoformat()
+    
+    if mytimer.past_due:
+        logging.info('The timer is past due!')
+    
+    logging.info('Python timer trigger function ran at %s', utc_timestamp)
+    print("Hello, World!")
+
+    # Aquí va tu código de descarga y procesamiento
